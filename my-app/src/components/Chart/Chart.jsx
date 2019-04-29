@@ -17,13 +17,23 @@ class Chart extends Component {
   }
  
 
-  componentDidMount() {
-    axios.get('http://localhost:8000/api/graph').then(res => {
+  async componentDidMount() {
+    
+try {
+    const response =  await axios.get("http://localhost:8000/api/graph");
+    const data =  await  response.data[1];
+    this.setState({
+      responseData : data
+    })
+  } catch(error) {
+    console.log(error);
+  }
+   /* axios.get('http://localhost:8000/api/graph').then(res => {
       this.setState({
         responseData : res.data[1]
       })
       console.log(this.state.responseData)
-    })
+    }) */
   }
 
   render() {
