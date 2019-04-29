@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { scaleLinear } from 'd3-scale'
 import { interpolateLab } from 'd3-interpolate'
+var f = require('d3-format')
 
 export default class Bars extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class Bars extends Component {
       .range(['#F3E5F5', '#7B1FA2'])
       .interpolate(interpolateLab)
   }
+  formatValue = f.format(".2s");
 
   getLableValue(labelValue) {
     console.log(labelValue);

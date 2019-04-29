@@ -47,7 +47,7 @@ var url = "http://api.worldbank.org/countries/USA/indicators/NY.GDP.MKTP.CD?per_
 request({
     url: url,
     json: true
-}, function (error, response, body) {
+}, async function (error, response, body) {
 
     if (!error && response.statusCode === 200) {
         console.log(body) // Print the json response
@@ -55,7 +55,7 @@ request({
             'Content-Type' : 'application/json'
         })
         res.end(JSON.stringify(body));
-        
+        await new Promise((resolve, reject) => setTimeout(resolve, 300000)); 
     }
 })
   
