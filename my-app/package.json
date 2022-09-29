@@ -14,8 +14,8 @@
     "all": "0.0.0",
     "axios": "^0.18.0",
     "d3-axis": "^1.0.4",
-    "d3-interpolate": "^1.1.2",
-    "d3-scale": "^1.0.4",
+    "d3-interpolate": "^3.0.1",
+    "d3-scale": "^4.0.2",
     "d3-selection": "^1.0.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
